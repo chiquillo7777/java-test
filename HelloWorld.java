@@ -32,18 +32,37 @@ public class HelloWorld {
                  System.out.println(-1);
             }*/
 
-        String array1[] = {"1", "6","6", "h","h", "9","7", "5"};
+        String array1[] = {"1", "6","6", "h","1", "9","7", "5"};
         int sum=0;
         for (int i=0; i < array1.length; i++) {
-            try {
-                 if(i%2 == 0 && isInteger(array1[i]) ){
-                        sum = sum + Integer.parseInt(array1[i]);
+            if(i != 2 && i!= 6 && i!= 8){
+                try {
+                    if(i%2 == 0 && isInteger(array1[i]) ){
+                            sum = sum + Integer.parseInt(array1[i]);
+                    }
+                } catch (Exception e) {
+                    throw e;
                 }
-            } catch (Exception e) {
-                throw e;
+
             }
 
         }
         System.out.println(sum);
+
+         Scanner input = new Scanner(System.in);
+
+        int givenNumber = 1991;
+        int dateOfBirth = 2016-25;
+
+        if(givenNumber > dateOfBirth){
+            System.out.println(1);
+        }else if(givenNumber == dateOfBirth){
+            System.out.println(0);
+
+        }else if(givenNumber < dateOfBirth){
+            System.out.println(-1);
+
+        }
+
     }
 }
